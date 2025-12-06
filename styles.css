@@ -1,0 +1,136 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-repeat: no-repeat; 
+    /* background-size: ; */
+   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+   overflow-y: hidden;
+}
+.listen {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    filter: brightness(0.5);
+    /* display: inline-block; */
+}
+.img-animate {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+/* Final animated state */
+.listen.animate {
+    animation: listenEffect 1.6s ease-out forwards;
+}
+
+/* Keyframes controlling the fancy effect */
+@keyframes listenEffect {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+        filter: brightness(0.5);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translateY(-5px) scale(1.05);
+        filter: brightness(1.2);
+    }
+
+    70% {
+        transform: translateY(0px) scale(1);
+    }
+
+    85% {
+        transform: translateY(-2px) scale(1.02);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        text-shadow: 0 0 10px #ffd700, 0 0 20px #ffdf00;
+        filter: brightness(1);
+    }
+}
+
+.header{
+    position: fixed;
+   font-family: "Herr Von Muellerhoff", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 76px;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95px;
+    width: 100%;
+    background: linear-gradient(135deg, beige 0%, rgb(227 227 0 / 56%) 100%);
+}
+.icon{
+    margin: 0px 18px;
+}
+.audio{
+     border: 2px solid red;
+}
+
+.soundBox {
+    display: flex;
+    justify-content: center;    /* center horizontally */
+    align-items: center;
+    gap: 20px;
+
+    position: absolute;
+    top: 88vh;                  /* moves slider+icon to 75% height */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.soundTracker {
+    padding: 10px;
+}
+
+#volumeSlider {
+    width: 350px;
+    height: 30px;
+    accent-color: orange;
+    cursor: pointer;
+}
+
+.btn-cont{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* images */
+.pop, .dog, .laugh, .clap{
+    height: 190px;
+    width: 275px;
+}
+img{
+    margin-top: 155px;
+    height: 190px;
+    width: 275px;
+}
+.pop:hover{
+    cursor: pointer;
+    transform: scale(1.09);
+}
+.dog:hover{
+    cursor: pointer;
+    transform: scale(1.09);
+}
+.clap:hover{
+    cursor: pointer;
+    transform: scale(1.09);
+}
+.laugh:hover{
+    cursor: pointer;
+    transform: scale(1.09);
+}
+.fa-solid {
+    font-size: 40px;
+}
